@@ -2,6 +2,7 @@ import React from 'react'
 import './MobileNav.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import HireMe from '../HireMe/HireMe'
 
 function MobileNav({ isOpen, toggleMenu }) {
   return (
@@ -14,15 +15,15 @@ function MobileNav({ isOpen, toggleMenu }) {
                     <Link className='menu-item' href='/'>Home</Link>
                 </li>
                 <li>
-                    <Link className='menu-item' href='/'>Skills</Link>
+                    <Link className='menu-item' href='/skills'>Skills</Link>
                 </li>
                 <li>
-                    <Link className='menu-item' href='/'>Work Experience</Link>
+                    <Link className='menu-item' href='/workexperience'>Work Experience</Link>
                 </li>
                 <li>
-                    <Link className='menu-item' href='/'>Contact Me</Link>
+                    <Link className='menu-item' href='/contactme'>Contact Me</Link>
                 </li>
-                <button className='contact-btn' onClick={()=>{}}>Hire Me</button>
+                <HireMe/>
             </ul>
         </div>
       </div>

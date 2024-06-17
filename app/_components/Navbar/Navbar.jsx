@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { AlignJustify } from 'lucide-react'
 import MobileNav from '../MobileNav/MobileNav';
+import HireMe from '../HireMe/HireMe';
 
 function Navbar() {
     const [openMenu, setOpenMenu]=useState(false);
@@ -31,7 +32,7 @@ function Navbar() {
                 <li>
                     <Link className='menu-item' href='/contactme'>Contact Me</Link>
                 </li>
-                <button className='contact-btn' >Hire Me</button>
+                <HireMe/>
             </ul>
             <button className='menu-btn' onClick={toggleMenu} >
                 <span className={"material-symbols-outlined"} style={{fontSize:"0.8rem"}}>{openMenu ? "close" : "Open"}</span>

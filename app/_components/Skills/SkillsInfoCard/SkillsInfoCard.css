@@ -7,13 +7,14 @@
 }
 
 .skills-info-card h6 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.8rem 0rem;
+    text-align: center;
     background: linear-gradient(180deg, #ac96ff 0%, #7c5fe6 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: black;
+    -webkit-text-fill-color: white;
     border-bottom: 1.5px solid #6751b9;
 }
 
@@ -30,10 +31,11 @@
 .skill-info p{
     font-size: 1rem;
     font-weight: 500;
+    color: white;
 }
 
 .skill-info .percentage {
-    color: #000000;
+    color: #fff;
 }
 
 .skill-progress-bg {
@@ -49,6 +51,11 @@
     width: 0%;
     height: 0.5rem;
     background: #3100f2;
+    background-repeat: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+.skill-progress:hover {
+    background: #6e00e4;
     background-repeat: 0.5rem;
     transition: all 0.5s ease-in-out;
 }

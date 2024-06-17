@@ -3,10 +3,10 @@ export const SKILLS = [
         title: "Frontend",
         icons:"/fr.png",
         skills: [
-            {skill:"HTML5", percentage: "95%"},
-            {skill:"CSS3 (Sass/SCSS)", percentage: "95%"},
-            {skill:"JavaScript", percentage: "85%"},
-            {skill:"React JS", percentage: "80%"},
+            {skill:"Tailwind CSS", percentage: "100%"},
+            {skill:"Bootstrap", percentage: "100%"},
+            {skill:"JavaScript", percentage: "95%"},
+            {skill:"React JS", percentage: "90%"},
         ],
     },
     {
@@ -15,15 +15,17 @@ export const SKILLS = [
         skills: [
             {skill:"Node JS", percentage: "60%"},
             {skill:"Express JS", percentage: "40%"},
+            {skill:"Next JS", percentage: "90%"},
+            {skill:"PHP", percentage: "40%"},
         ],
     },
     {
         title: "Tools",
         icons:"/to.png",
         skills: [
-            {skill:"Git & GitHub", percentage: "70%"},
-            {skill:"Visual Studio Code", percentage: "95%"},
-            {skill:"Webpack", percentage: "75%"},
+            {skill:"Git & GitHub", percentage: "90%"},
+            {skill:"Visual Studio Code", percentage: "100%"},
+            {skill:"Webpack", percentage: "90%"},
             {skill:"Responsive Design", percentage: "100%"},
         ],
     },
@@ -31,10 +33,30 @@ export const SKILLS = [
         title: "Soft Skills",
         icons:"/sk.png",
         skills: [
-            {skill:"Problem Solving", percentage: "80%"},
-            {skill:"Collaboration", percentage: "85%"},
-            {skill:"Attention to Detail", percentage: "75%"},
-            {skill:"React JS", percentage: "80%"},
+            {skill:"Problem Solving", percentage: "100%"},
+            {skill:"Collaboration", percentage: "100%"},
+            {skill:"Attention to Detail", percentage: "95%"},
+            {skill:"Communication", percentage: "100%"},
+        ],
+    },
+    {
+        title: "UI/UX",
+        icons:"/ui-1.png",
+        skills: [
+            {skill:"Figma", percentage: "80%"},
+            {skill:"Adobe Illustrator", percentage: "80%"},
+            {skill:"Adobe Photoshop", percentage: "60%"},
+            {skill:"Adobe After Effect", percentage: "40%"},
+        ],
+    },
+    {
+        title: "Others",
+        icons:"/ds1.png",
+        skills: [
+            {skill:"Data Structure And Algorithm", percentage: "70%"},
+            {skill:"Information System Design", percentage: "80%"},
+            {skill:"Computer Organization Design", percentage: "60%"},
+            {skill:"Database Management System", percentage: "90%"},
         ],
     },
 ];
@@ -42,7 +64,7 @@ export const SKILLS = [
 export const WORK_EXPERIENCE=[
     {
         title: "Junior Frontend Developer at Matin Softech",
-        date: "January 2021 - December 2022",
+        date: "January 2022 - December 2023",
         responsibilities:[
             "Work in a team of frontend developers in the redesign of the company's flagship product.",
             "Implemented advanced CSS animation and transitions to enhance the overall user experience.",
@@ -52,7 +74,7 @@ export const WORK_EXPERIENCE=[
     },
     {
         title: "React JS Developer at Zil Enterprises PVT LTD",
-        date: "December 2022 - January 2024",
+        date: "December 2023 - January 2024",
         responsibilities:[
             "Collaborate with cross-functional teams to design, develop, and deploy robust React-based web applications.",
             "Implement complex UI components and features using React and Redux for state management.",
