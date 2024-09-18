@@ -63,6 +63,17 @@ export const SKILLS = [
 
 export const WORK_EXPERIENCE=[
     {
+        title: "Graphic Designer",
+        date: "2021 - 2022",
+        responsibilities:[
+            "Lead the design and development of visual content for websites, applications, and digital platforms, ensuring aesthetic consistency and user-centric designs.",
+            "Collaborate closely with UX/UI designers and developers to create engaging and functional user interfaces.",
+            "Utilize design tools such as Adobe Creative Suite, Figma, and Sketch to produce high-quality graphics, wireframes, and prototypes.",
+            "Ensure that design elements align with brand identity while optimizing visuals for performance across various devices and screen sizes.",
+            "Stay updated with the latest design trends, tools, and technologies to continuously improve design processes and outputs.",
+        ],
+    },
+    {
         title: "Junior Frontend Developer at Matin Softech",
         date: "January 2022 - December 2023",
         responsibilities:[
@@ -81,17 +92,6 @@ export const WORK_EXPERIENCE=[
             "Optimize application performance through code refactoring, profiling, and troubleshooting.",
             "Integrate third-party APIs and services to enhance application functionality and user experience.",
             "Conduct code reviews and provide constructive feedback to maintain code quality and standards.",
-        ],
-    },
-    {
-        title: "Next.js MERN Stack Developer at Supreme Tech",
-        date: "January 2024 - Present",
-        responsibilities:[
-            "Lead the development of Next.js applications within the MERN stack environment, ensuring high performance and scalability.",
-            "Collaborate closely with designers and backend developers to implement user interfaces and application features.",
-            "Utilize server-side rendering (SSR) and static site generation (SSG) capabilities of Next.js to optimize website loading times and SEO.",
-            "Integrate MongoDB, Express.js, and Node.js components seamlessly with Next.js frontend for full-stack functionality.",
-            "Implement authentication and authorization mechanisms using JWT and OAuth for secure user authentication.",
         ],
     },
 ]

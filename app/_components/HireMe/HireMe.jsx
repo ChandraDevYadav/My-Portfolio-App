@@ -15,13 +15,13 @@ function HireMe() {
         <PopoverContent className=''>
             <h1 className="text-lg font-bold my-3 text-center">Start Chat with Me</h1>
             <div className="grid grid-cols-3">
-                <Link href={'tel:+9779805912060'}>
+                {/* <Link href={'tel:+9779805912060'}>
                     <Image src={'/p.png'} width={60} height={60}/>
-                </Link>
+                </Link> */}
                 <Link href={'tel:+9779805912060'}>
                 <Image src={'/w.png'} width={60} height={60}/>
                 </Link>
-                <Link href={'tel:+9779805912060'}>
+                <Link href={'mailto:yadavchandradev4@gmail.com'}>
                 <Image src={'/e.png'} width={60} height={60}/>
                 </Link>
             </div>

@@ -14,7 +14,7 @@ function Hero() {
             <div className="tech-icon">
             <Image src='/r.png' alt='' width={50} height={50}/>
             </div>
-            <Image className='rounded-3xl' src='/b-3.jpeg' alt='' width={300} height={300}/>
+            <Image className='rounded-3xl bg-gradient-to-r from-sky-500 to-indigo-500' src='/my.png' alt='' width={300} height={300}/>
         </div>
         <div> 
         <div className="tech-icon">
