@@ -57,11 +57,14 @@ const Education = () => {
   return (
     <section className="py-16">
       <div className="px-4">
-        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-10">
-          Education & Training
-        </h2>
+        <div className="mb-10">
+          <p className="text-sm uppercase tracking-[0.35em] text-indigo-400">Learning Path</p>
+          <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">
+            Education & Training
+          </h2>
+        </div>
 
-        <div className="relative overflow-hidden rounded-xl shadow-lg">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-800/70 bg-slate-900/50 shadow-[0_0_60px_rgba(15,23,42,0.3)] backdrop-blur-xl">
           {/* Carousel */}
           <div
             className="flex transition-transform duration-700 ease-in-out"
@@ -70,13 +73,13 @@ const Education = () => {
             {educationData.map((edu, idx) => (
               <div
                 key={idx}
-                className="min-w-full bg-white dark:bg-gray-800 flex flex-col md:flex-row items-center gap-6 p-6"
+                className="min-w-full bg-transparent flex flex-col md:flex-row items-center gap-6 p-6"
               >
                 {/* Left Image */}
                 <img
                   src={edu.image}
                   alt={edu.title}
-                  className="w-48 h-48 object-fill rounded-lg shadow-md bg-white"
+                  className="w-48 h-48 object-fill rounded-2xl border border-slate-700 bg-slate-800/80 p-2 shadow-md"
                 />
 
                 {/* Right Text */}

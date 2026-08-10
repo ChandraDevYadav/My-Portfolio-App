@@ -6,6 +6,8 @@ import Languages from "./_components/Languages";
 import Projects from "./_components/Projects";
 import Skills from "./_components/Skills/Skills";
 import WorkExperience from "./_components/WorkExperince/WorkExperience";
+import GithubCalendarSection from "./_components/GithubCalendar/GithubCalendarSection";
+import Testimonials from "./_components/Testimonials/Testimonials";
 import "./globals.css";
 
 import AiAgentBuilder from "./_components/AiAgentBuilder/AiAgentBuilder";
@@ -23,6 +25,8 @@ export default function Home() {
         <AiAgentBuilder />
         <Skills />
         <Projects />
+        <GithubCalendarSection />
+        <Testimonials />
         <Education />
         <Languages />
         <WorkExperience />

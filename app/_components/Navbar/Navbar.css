@@ -54,10 +54,16 @@
     transition: all 0.3s ease;
 }
 
-.menu-item:hover::before{
+.menu-item:hover::before,
+.menu-item.active::before{
     width: 100%;
     transform: translateX(0);
     opacity: 1;
+}
+
+.menu-item.active{
+    color: #a993fe;
+    font-weight: 700;
 }
 
 .contact-btn{
