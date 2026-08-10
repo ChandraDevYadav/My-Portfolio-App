@@ -8,11 +8,19 @@ import Skills from "./_components/Skills/Skills";
 import WorkExperience from "./_components/WorkExperince/WorkExperience";
 import "./globals.css";
 
+import AiAgentBuilder from "./_components/AiAgentBuilder/AiAgentBuilder";
+
 export default function Home() {
   return (
-    <div className="bg-blue-300 ">
-      <div className="container mx-3">
+    <div className="relative w-full overflow-hidden">
+      {/* Background Gradient Orbs */}
+      <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+      <div className="absolute top-0 -right-4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <Hero />
+        <AiAgentBuilder />
         <Skills />
         <Projects />
         <Education />

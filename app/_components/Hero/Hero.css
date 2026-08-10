@@ -31,17 +31,11 @@
 }
 
 .hero-content h2 {
-   font-size: 3.8rem;
-   font-weight: 600;
-   line-height: 5rem;
    margin-bottom: 1rem;
 }
 
 .hero-content p {
     width: 80%;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 2rem;
 }
 
 .hero-img{
@@ -89,13 +83,7 @@
 }
 
 @media (max-width: 1025px) {
-    .hero-content h2 {
-      font-size: 3rem;
-      line-height: 4rem;
-    }
     .hero-content p {
-        font-size: 0.9rem;
-        line-height: 1.6rem;
     }
 
     .hero-img > div > img {
@@ -153,13 +141,9 @@
 
 @media (max-width: 600px) {
     .hero-content h2 {
-        font-size: 2.2rem;
-        line-height: 3rem;
     }
 
     .hero-content p {
-        font-size: 0.8rem;
-        line-height: 1.3rem;
     }
 
     .hero-img {

@@ -12,12 +12,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="bg-blue-300">
-        <Navbar/>
-        {children}
-        <Footer/>
+    <html lang="en" className="dark scroll-smooth">
+      <body className={`${inter.className} bg-slate-950 text-slate-50 antialiased selection:bg-indigo-500/30`}>
+        <div className="relative min-h-screen flex flex-col">
+          <Navbar/>
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer/>
         </div>
       </body>
     </html>

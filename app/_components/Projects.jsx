@@ -1,48 +1,70 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-const projects = [
+export const projects = [
+  {
+    title: "MyGentic Brain",
+    date: "05/06/2026 - Current",
+    link: "https://app.mygentic.io",
+    image: "/m.png",
+    description: "An advanced AI Brain platform designed to automate workflows, provide intelligent assistance, and deploy custom AI agents.",
+    tech: ["Next.js", "Node.js", "AI/LLM Integration", "MongoDB"]
+  },
   {
     title: "AI District | AI Portal",
     date: "01/06/2025 - Current",
-    link: "https://aidistrictagents.com/",
+    link: "https://aidistrictagents.com",
     image: "/e.png",
+    description: "A comprehensive AI portal and marketplace for discovering, deploying, and managing custom AI agents and automation tools.",
+    tech: ["React.js", "Express.js", "OpenAI API", "Tailwind CSS"]
   },
   {
     title: "NextGen Coach",
     date: "30/04/2025 - 30/06/2025",
     link: "https://nextgencoach.testir.xyz",
-    image: "/c.png",
+    image: "/e.png",
+    description: "An AI-powered coaching and mentorship platform developed to connect users with intelligent, personalized guidance.",
+    tech: ["MERN Stack", "AI Integration", "WebSockets", "JWT"]
   },
   {
     title: "Zil App",
     date: "09/04/2023 - Current",
     link: "https://zil.com",
-    image: "/f.png",
+    image: "/zil.png",
+    description: "A scalable service-providing platform with responsive interfaces, built to seamlessly connect service providers with customers.",
+    tech: ["React.js", "Node.js", "MongoDB", "Redux"]
   },
   {
     title: "Hotel Booking (Expedia Clone)",
     date: "01/09/2024 - 01/10/2024",
     link: "https://hotel-booking-hotel-booking.onrender.com",
-    image: "/d.png",
+    image: "/Vercel.png",
+    description: "A full-stack hotel booking application replicating Expedia's core features, including search, filtering, and secure reservations.",
+    tech: ["React.js", "Express.js", "MongoDB", "Stripe API"]
   },
   {
     title: "Gyan Sagar (Coursera Clone)",
     date: "01/10/2024 - 17/10/2024",
     link: "https://gyan-sagar-education.onrender.com",
-    image: "/g.png",
+    image: "/Vercel.png",
+    description: "An e-learning platform clone featuring course browsing, video playback, user progress tracking, and enrollment systems.",
+    tech: ["MERN Stack", "JWT Auth", "Cloudinary", "Material UI"]
   },
   {
     title: "Milanbindu Dating App",
     date: "03/07/2024 - 01/08/2024",
     link: "https://milanbindu-dating-app.onrender.com",
-    image: "/n.png",
+    image: "/Vercel.png",
+    description: "A modern dating web application featuring user matching algorithms, real-time chat, and dynamic profile management.",
+    tech: ["React.js", "Socket.io", "Node.js", "MongoDB"]
   },
   {
     title: "More Projects",
     date: "01/04/2023 - Current",
     link: "https://github.com/ChandraDevYadav",
-    image: "/i.png",
+    image: "/git.png",
+    description: "Explore my open-source contributions, side hustles, and experimental web applications on my GitHub repository.",
+    tech: ["Various", "Open Source", "Web Dev", "UI/UX"]
   },
 ];
 

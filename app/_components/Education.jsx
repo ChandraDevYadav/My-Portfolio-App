@@ -9,7 +9,7 @@ const educationData = [
     date: "01/01/2020 - Current",
     location: "Biratnagar, Nepal",
     level: "EQF Level 6",
-    image: "/b-1.jpeg",
+    image: "/Eastern.png",
   },
   {
     title: "National Examination Board (NEB)",
@@ -17,7 +17,7 @@ const educationData = [
     date: "01/01/2016 - 01/01/2018",
     location: "Biratnagar, Nepal",
     level: "EQF Level 4",
-    image: "/b-2.jpeg",
+    image: "/NEB.jpg",
   },
   {
     title: "Secondary Education Examination (SEE)",
@@ -25,7 +25,7 @@ const educationData = [
     date: "01/01/2004 - 01/01/2015",
     location: "Biratnagar, Nepal",
     level: "EQF Level 2",
-    image: "/b-3.jpeg",
+    image: "/SEE.jpg",
   },
 ];
 
@@ -76,7 +76,7 @@ const Education = () => {
                 <img
                   src={edu.image}
                   alt={edu.title}
-                  className="w-full md:w-1/3 h-48 object-cover rounded-lg shadow-md"
+                  className="w-48 h-48 object-fill rounded-lg shadow-md bg-white"
                 />
 
                 {/* Right Text */}

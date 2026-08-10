@@ -18,7 +18,10 @@ function Navbar() {
     <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />
       <nav className='nav-wrapper'>
         <div className="nav-content">
-            <Image src='/logo1.png' alt='' width={100} height={100} className='rounded-full w-20 h-20'/>
+            <div className='flex justify-start items-center gap-2 py-2'>
+                <Image src='/logo1.png' alt='' width={50} height={50} className='rounded-full object-fill'/>
+            <p className='text-2xl font-bold'><span className='text-[#704ef5]'>Chandra</span> Dev <span className='text-[#704ef5]'>Yadav</span></p>
+            </div>
             <ul>
                 <li>
                     <Link className='menu-item' href='/'>Home</Link>
