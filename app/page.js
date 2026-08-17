@@ -7,10 +7,10 @@ import Projects from "./_components/Projects";
 import Skills from "./_components/Skills/Skills";
 import WorkExperience from "./_components/WorkExperince/WorkExperience";
 import GithubCalendarSection from "./_components/GithubCalendar/GithubCalendarSection";
-import Testimonials from "./_components/Testimonials/Testimonials";
 import "./globals.css";
-
 import AiAgentBuilder from "./_components/AiAgentBuilder/AiAgentBuilder";
+import ProofStrip from "./_components/ProofStrip";
+import BuildProcess from "./_components/BuildProcess";
 
 export default function Home() {
   return (
@@ -22,11 +22,12 @@ export default function Home() {
 
       <div className="container mx-auto px-4 relative z-10">
         <Hero />
+        <ProofStrip />
         <AiAgentBuilder />
         <Skills />
         <Projects />
+        <BuildProcess />
         <GithubCalendarSection />
-        <Testimonials />
         <Education />
         <Languages />
         <WorkExperience />

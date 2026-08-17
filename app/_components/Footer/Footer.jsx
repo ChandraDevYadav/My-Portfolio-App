@@ -4,7 +4,7 @@ import './Footer.css'
 function Footer() {
   return (
     <div className='footer'>
-      @ 2024 Chandra Dev, Code Hustler
+      © {new Date().getFullYear()} Chandra Dev Yadav · AI Product Engineer
     </div>
   )
 }

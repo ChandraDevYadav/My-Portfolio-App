@@ -22,7 +22,7 @@ export default function AIChatbot() {
   const generateResponse = (text) => {
     const lower = text.toLowerCase();
     if (lower.includes("experience") || lower.includes("work")) {
-      return "I have 3+ years of frontend and 1+ year of full-stack experience. I am currently an AI Agent Builder and MERN Stack Developer at INDUSTRY ROCKSTAR MEDIA TECH PVT. LTD.";
+      return "Chandra has 3+ years of frontend experience and 1+ year of full-stack experience. He currently builds MERN and AI-powered products at Industry Rockstar Media Tech.";
     } else if (lower.includes("project")) {
       return "Some of my notable projects include MyGentic Brain (AI Application), AI District, and the Zil App.";
     } else if (lower.includes("skill") || lower.includes("tech")) {
@@ -32,9 +32,9 @@ export default function AIChatbot() {
     } else if (lower.includes("contact") || lower.includes("email") || lower.includes("hire")) {
       return "You can reach me directly at yadavchandradev4@gmail.com or call me at (+977) 9805912060.";
     } else if (lower.includes("hello") || lower.includes("hi") || lower.includes("hey")) {
-      return "Hello! I'm Chandra's mock AI assistant. How can I help you learn more about his background?";
+      return "Hello! I can help you explore Chandra's public portfolio - ask about experience, projects, skills, or getting in touch.";
     } else {
-      return "I'm a simple hardcoded bot right now! Try asking me about Chandra's 'experience', 'projects', 'skills', or 'contact' info.";
+      return "I can answer questions about Chandra's public portfolio. Try experience, projects, skills, education, or contact.";
     }
   };
 
@@ -84,8 +84,8 @@ export default function AIChatbot() {
                   <Bot className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-100 text-sm">Chandra's Mock AI</h3>
-                  <p className="text-xs text-slate-400">Ask about my experience!</p>
+                  <h3 className="font-semibold text-slate-100 text-sm">Portfolio concierge</h3>
+                  <p className="text-xs text-slate-400">Public profile, projects, and contact</p>
                 </div>
               </div>
               <button 
@@ -100,8 +100,8 @@ export default function AIChatbot() {
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {messages.length === 0 && (
                 <div className="text-center text-slate-400 text-sm mt-8">
-                  <p>Hi! I'm a local mock AI clone.</p>
-                  <p className="mt-2">Try asking me about Chandra's <strong>experience</strong>, <strong>projects</strong>, or <strong>skills</strong>!</p>
+                  <p>Hi! I&apos;m Chandra&apos;s portfolio concierge.</p>
+                  <p className="mt-2">Ask about his <strong>experience</strong>, <strong>projects</strong>, <strong>skills</strong>, or <strong>contact</strong> information.</p>
                 </div>
               )}
               

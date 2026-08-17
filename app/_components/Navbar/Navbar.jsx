@@ -13,11 +13,11 @@ function Navbar() {
 
     const navItems = [
         { label: 'Home', href: '/' },
+        { label: 'Services', href: '/services' },
         { label: 'Case Studies', href: '/case-studies' },
-        { label: 'Uses', href: '/uses' },
-        { label: 'Skills', href: '/skills' },
-        { label: 'Experience', href: '/workexperience' },
-        { label: 'Contact', href: '/contactme' },
+        { label: 'Lab', href: '/lab' },
+        { label: 'Writing', href: '/writing' },
+        { label: 'Stack', href: '/stack' },
     ];
 
     const toggleMenu = () => {
@@ -48,7 +48,7 @@ function Navbar() {
                                 </Link>
                             </li>
                         ))}
-                        <HireMe/>
+                        <Link href="/availability" className="contact-btn">Work with me</Link>
                     </ul>
                     <button className='menu-btn' onClick={toggleMenu} >
                         <span className={"material-symbols-outlined"} style={{fontSize:"0.8rem"}}>{openMenu ? "close" : "Open"}</span>

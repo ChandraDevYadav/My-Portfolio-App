@@ -1,73 +1,80 @@
-import React from 'react';
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import ProjectGallery from "../_components/ProjectGallery";
+
+const studies = [
+  {
+    name: "MyGentic Brain",
+    label: "AI knowledge and automation platform",
+    problem: "Teams need a faster way to surface useful context from growing knowledge bases and turn that context into action.",
+    approach: "A product direction centred on retrieval-augmented generation, custom LLM integration, and agent-powered workflows - designed so intelligent assistance feels useful rather than complicated.",
+    role: "AI product engineering · Full-stack development",
+    stack: ["Next.js", "Node.js", "MongoDB", "LLM integration", "RAG"],
+    link: "https://app.mygentic.io",
+    screenshots: ["/MyGentic-1.png", "/MyGentic-2.png", "/MyGentic-3.png", "/MyGentic-4.png"],
+  },
+  {
+    name: "AI District",
+    label: "AI agent portal and marketplace",
+    problem: "People exploring AI tools need an understandable way to discover, deploy, and manage agents without navigating a fragmented ecosystem.",
+    approach: "A central portal that brings together agent discovery, practical automation use cases, and a clean interface for engaging with AI-powered tools.",
+    role: "Full-stack development · AI integration",
+    stack: ["React", "Express", "OpenAI API", "Tailwind CSS"],
+    link: "https://aidistrictagents.com",
+    screenshots: ["/Aidistrict-1.png", "/Aidistrict-2.png", "/Aidistrict-3.png"],
+  },
+  {
+    name: "Zil App",
+    label: "Service-provider platform",
+    problem: "A service marketplace needs responsive interfaces, scalable features, and close coordination across product, design, and engineering.",
+    approach: "A React-based experience built with reusable UI patterns and state management, paired with delivery leadership, performance work, and collaboration across the team.",
+    role: "React development · Team coordination",
+    stack: ["React", "Redux", "Node.js", "MongoDB"],
+    link: "https://play.google.com/store/apps/details?id=com.zilcommerce.flutter_mainapp&hl=en",
+    screenshots: ["/ZIL-1.jpg", "/ZIL-2.jpg", "/ZIL-3.jpg", "/ZIL-4.jpg", "/ZIL-5.jpg", "/ZIL-6.jpg", "/ZIL-7.jpg", "/ZIL-8.jpg", "/zil-play.png"],
+  },
+];
+
+export const metadata = {
+  title: "Case Studies | Chandra Dev Yadav",
+  description: "Selected AI and web-product case studies by Chandra Dev Yadav.",
+};
 
 export default function CaseStudies() {
   return (
-    <div className="min-h-screen py-24 relative overflow-hidden">
-      <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-      <div className="absolute top-0 -right-4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
-      
-      <div className="container mx-auto px-4 relative z-10 max-w-5xl">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-100 mb-4">Case <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Studies</span></h1>
-          <p className="text-slate-400 text-lg">Deep dives into my top projects, problem-solving, and architecture.</p>
-        </div>
+    <div className="relative min-h-screen overflow-hidden py-24">
+      <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="absolute right-0 top-1/3 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl" />
+      <main className="relative z-10 mx-auto max-w-6xl px-6">
+        <header className="max-w-3xl py-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">Selected case studies</p>
+          <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">Products built around real work, not just technology.</h1>
+          <p className="mt-6 text-lg leading-relaxed text-slate-300">A concise view of the product problems, engineering approach, and responsibilities behind selected work. Specific commercial metrics and internal details remain confidential.</p>
+        </header>
 
-        <div className="space-y-12">
-          {/* Case Study 1 */}
-          <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">MyGentic Brain (AI Application)</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-indigo-400 mb-3">The Problem</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Users struggled to find specific context within large corporate knowledge bases. Traditional search methods were inefficient and lacked contextual understanding.
-                </p>
-                <h3 className="text-xl font-semibold text-indigo-400 mb-3">The Solution</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Engineered an advanced AI application using a Retrieval-Augmented Generation (RAG) system. Integrated Custom LLMs to parse and index documents intelligently.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Tech Stack</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['React.js', 'Next.js', 'Node.js', 'MongoDB', 'OpenAI', 'Pinecone', 'Tailwind CSS'].map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-indigo-600/20 text-indigo-300 rounded-full text-sm border border-indigo-500/30">
-                      {tech}
-                    </span>
-                  ))}
+        <div className="space-y-8 pb-16">
+          {studies.map((study, index) => (
+            <article key={study.name} className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50 shadow-2xl backdrop-blur-sm">
+              <div className="grid lg:grid-cols-[0.7fr_1.3fr]">
+                <div className="border-b border-white/10 bg-gradient-to-br from-cyan-400/10 via-indigo-500/10 to-transparent p-8 lg:border-b-0 lg:border-r lg:p-10">
+                  <p className="font-mono text-xs text-cyan-300">0{index + 1}</p>
+                  <p className="mt-10 text-sm font-medium text-slate-400">{study.label}</p>
+                  <h2 className="mt-2 text-3xl font-bold text-white">{study.name}</h2>
+                  <p className="mt-6 text-sm leading-relaxed text-slate-300">{study.role}</p>
+                  <a href={study.link} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 transition hover:text-cyan-100">Visit product <ArrowUpRight className="h-4 w-4" /></a>
+                </div>
+                <div className="p-8 lg:p-10">
+                  <div className="grid gap-8 sm:grid-cols-2">
+                    <div><h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-300">Opportunity</h3><p className="mt-3 leading-relaxed text-slate-300">{study.problem}</p></div>
+                    <div><h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-300">Approach</h3><p className="mt-3 leading-relaxed text-slate-300">{study.approach}</p></div>
+                  </div>
+                  <div className="mt-8 border-t border-white/10 pt-6"><p className="text-sm font-semibold text-white">Core tools</p><div className="mt-3 flex flex-wrap gap-2">{study.stack.map((tool) => <span key={tool} className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-1.5 text-xs text-cyan-100"><CheckCircle2 className="h-3 w-3" />{tool}</span>)}</div></div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Case Study 2 */}
-          <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-3xl p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Zil App</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-indigo-400 mb-3">The Problem</h3>
-                <p className="text-slate-300 leading-relaxed mb-6">
-                  Zil's service-providing platform required a highly responsive, scalable web interface that could handle real-time updates and seamless user experience across devices.
-                </p>
-                <h3 className="text-xl font-semibold text-indigo-400 mb-3">The Solution</h3>
-                <p className="text-slate-300 leading-relaxed">
-                  Led the development of a React.js based SPA. Implemented robust state management, optimized rendering cycles, and closely collaborated with UI/UX designers to deliver a pixel-perfect, cost-efficient platform.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
-                <h3 className="text-lg font-semibold text-white mb-4">Tech Stack</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['React.js', 'Redux', 'Material UI', 'Express.js', 'REST APIs', 'Git'].map(tech => (
-                    <span key={tech} className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm border border-purple-500/30">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+              <ProjectGallery project={study.name} screenshots={study.screenshots} />
+            </article>
+          ))}
         </div>
-      </div>
+      </main>
     </div>
   );
 }

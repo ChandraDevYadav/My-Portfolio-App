@@ -1,16 +1,16 @@
 import React from 'react'
 import './MobileNav.css'
 import Link from 'next/link'
-import HireMe from '../HireMe/HireMe'
 
 function MobileNav({ isOpen, toggleMenu, pathname }) {
   const navItems = [
     { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
     { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Uses', href: '/uses' },
-    { label: 'Skills', href: '/skills' },
-    { label: 'Experience', href: '/workexperience' },
-    { label: 'Contact', href: '/contactme' },
+    { label: 'Lab', href: '/lab' },
+    { label: 'Writing', href: '/writing' },
+    { label: 'Stack', href: '/stack' },
+    { label: 'Work with me', href: '/availability' },
   ];
 
   const isActive = (href) => {
@@ -32,7 +32,6 @@ function MobileNav({ isOpen, toggleMenu, pathname }) {
                         </Link>
                     </li>
                 ))}
-                <HireMe/>
             </ul>
         </div>
       </div>

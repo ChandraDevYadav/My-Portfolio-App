@@ -11,6 +11,7 @@ export const projects = [
     description: "An advanced AI Brain platform designed to automate workflows, provide intelligent assistance, and deploy custom AI agents.",
     tech: ["Next.js", "Node.js", "AI/LLM Integration", "MongoDB"],
     live: true,
+    featured: true,
   },
   {
     title: "AI District | AI Portal",
@@ -20,6 +21,7 @@ export const projects = [
     description: "A comprehensive AI portal and marketplace for discovering, deploying, and managing custom AI agents and automation tools.",
     tech: ["React.js", "Express.js", "OpenAI API", "Tailwind CSS"],
     live: true,
+    featured: true,
   },
   {
     title: "NextGen Coach",
@@ -33,11 +35,12 @@ export const projects = [
   {
     title: "Zil App",
     date: "09/04/2023 - Current",
-    link: "https://zil.com",
+    link: "https://play.google.com/store/apps/details?id=com.zilcommerce.flutter_mainapp&hl=en",
     image: "/zil.png",
     description: "A scalable service-providing platform with responsive interfaces, built to seamlessly connect service providers with customers.",
     tech: ["React.js", "Node.js", "MongoDB", "Redux"],
     live: true,
+    featured: true,
   },
   {
     title: "Hotel Booking (Expedia Clone)",
@@ -77,11 +80,10 @@ export const projects = [
   },
 ];
 
-const AUTOPLAY_DURATION = 6000; // 6 seconds per slide
+const featuredProjects = projects.filter((project) => project.featured);
 
 const ProjectsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [direction, setDirection] = useState(1);
 
   const goTo = useCallback(
@@ -94,20 +96,13 @@ const ProjectsCarousel = () => {
 
   const nextSlide = useCallback(() => {
     setDirection(1);
-    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === featuredProjects.length - 1 ? 0 : prev + 1));
   }, []);
 
   const prevSlide = useCallback(() => {
     setDirection(-1);
-    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? featuredProjects.length - 1 : prev - 1));
   }, []);
-
-  // Autoplay + progress
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setTimeout(() => nextSlide(), AUTOPLAY_DURATION);
-    return () => clearTimeout(timer);
-  }, [currentIndex, isPaused, nextSlide]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -119,7 +114,7 @@ const ProjectsCarousel = () => {
     return () => window.removeEventListener("keydown", handleKey);
   }, [nextSlide, prevSlide]);
 
-  const current = projects[currentIndex];
+  const current = featuredProjects[currentIndex];
 
   const slideVariants = {
     enter: (dir) => ({ x: dir > 0 ? 60 : -60, opacity: 0, scale: 0.98 }),
@@ -128,7 +123,7 @@ const ProjectsCarousel = () => {
   };
 
   return (
-    <section className="relative w-full py-20">
+    <section id="featured-work" className="relative w-full scroll-mt-24 py-20">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
@@ -137,7 +132,7 @@ const ProjectsCarousel = () => {
               Selected Work
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white sm:text-5xl">
-              Projects I&apos;ve shipped
+              A few products I&apos;m proud to have shipped
             </h2>
           </div>
           <div className="flex items-center gap-2 font-mono text-sm text-zinc-400">
@@ -145,30 +140,14 @@ const ProjectsCarousel = () => {
               {String(currentIndex + 1).padStart(2, "0")}
             </span>
             <span className="text-zinc-600">/</span>
-            <span>{String(projects.length).padStart(2, "0")}</span>
+            <span>{String(featuredProjects.length).padStart(2, "0")}</span>
           </div>
         </div>
 
         {/* Carousel card */}
         <div
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
           className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] backdrop-blur-xl shadow-2xl"
         >
-          {/* Progress bar */}
-          <div className="absolute left-0 right-0 top-0 z-20 h-1 bg-white/5">
-            <motion.div
-              key={currentIndex}
-              className="h-full bg-gradient-to-r from-cyan-400 to-blue-500"
-              initial={{ width: "0%" }}
-              animate={{ width: isPaused ? "0%" : "100%" }}
-              transition={{
-                duration: AUTOPLAY_DURATION / 1000,
-                ease: "linear",
-              }}
-            />
-          </div>
-
           <div className="grid gap-0 md:grid-cols-5">
             {/* Image side */}
             <div className="relative md:col-span-2">
@@ -188,7 +167,7 @@ const ProjectsCarousel = () => {
                     alt={current.title}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.6 }}
-                    className="h-full w-full object-contain p-8 md:object-cover md:p-0"
+                    className="h-full w-full object-contain p-10 md:p-14"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -288,7 +267,7 @@ const ProjectsCarousel = () => {
 
         {/* Thumbnail strip / dots */}
         <div className="mt-6 flex items-center justify-center gap-2 overflow-x-auto pb-2">
-          {projects.map((p, idx) => (
+          {featuredProjects.map((p, idx) => (
             <button
               key={p.title}
               onClick={() => goTo(idx, idx > currentIndex ? 1 : -1)}
@@ -315,6 +294,7 @@ const ProjectsCarousel = () => {
             </button>
           ))}
         </div>
+        <p className="mt-6 text-center text-sm text-slate-400">More experiments and open-source work are available on <a className="text-cyan-300 underline-offset-4 hover:underline" href="https://github.com/ChandraDevYadav2000" target="_blank" rel="noreferrer">GitHub</a>.</p>
       </div>
     </section>
   );
